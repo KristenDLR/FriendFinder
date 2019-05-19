@@ -15,11 +15,9 @@ app.use(express.static(path.join(__dirname, "./app/public/home.html")));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-require(path.join(__dirname, ))
-
-//Survey Queue (DATA)
-//
-
+//link routes
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 //Starts the server to begin listening
 app.listen(PORT, function() {
