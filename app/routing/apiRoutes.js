@@ -27,7 +27,7 @@ app.post("/api/friends", function(req, res){
   //difference in quesions
   var diff = 0;
   for(var j = 0; j < surveyResponse.length; j++){
-    diff += Math.abs(friends[1].scores[j] - surveyResponse[j]);
+    diff += Math.abs(friends[i].scores[j] - surveyResponse[j]);
   }
 
   //the difference is the lowest found, friend match occurres
