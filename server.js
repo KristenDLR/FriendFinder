@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //set up static pages css
+//app.use(express.static("app/public"));
 app.use(express.static(path.join(__dirname, "./app/public/home.html")));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
