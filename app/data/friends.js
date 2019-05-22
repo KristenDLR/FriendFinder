@@ -1,6 +1,6 @@
 //Survey Data as an array of objects.
 
-var arrayOfFriends = [
+module.exports = [
 {
   "name":"Monica",
   "photo":"https://vignette.wikia.nocookie.net/friends/images/8/85/Monica_3.jpg/revision/latest/scale-to-width-down/211?cb=20190210055747",
@@ -98,4 +98,3 @@ var arrayOfFriends = [
     ]
 }
 ];
-
