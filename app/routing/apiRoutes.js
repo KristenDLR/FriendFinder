@@ -5,6 +5,9 @@ module.exports = function(app){
 
   //Display JSon of all possible friends
 app.get("/api/friends", function(req, res) {
+
+  console.log(friends)
+
   res.json(friends)
 })
 
@@ -28,12 +31,14 @@ app.post("/api/friends", function(req, res){
   var diff = 0;
   for(var j = 0; j < surveyResponse.length; j++){
     diff += Math.abs(friends[i].scores[j] - surveyResponse[j]);
+    console.log(diff);
   }
 
   //the difference is the lowest found, friend match occurres
   if(diff < minDifference){
     minDifference = diff;
     matches = friends[i];
+    console.log(matches);
   }
 
  }
