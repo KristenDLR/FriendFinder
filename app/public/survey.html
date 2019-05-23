@@ -7,10 +7,12 @@
   <title>Friend Finder Survey</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery.js"></script>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <script src="index.js"></script>
+
 </head>
 <body>
 
@@ -22,10 +24,10 @@
         <h3>About You</h3>
           <div class="col-sm-8 col-sm-offset-2">
             <p class="cool-font">Name(Required)</p>
-            <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+            <input class="form-control" type="text" id="name" placeholder="Enter Your Name">
             <br>
             <p class="cool-font">Link to Photo Image(Required)</p>
-          <input class="form-control" type="text" id="author" placeholder="Enter Your Picture Link Here">
+          <input class="form-control" type="text" id="photo" placeholder="Enter Your Picture Link Here">
         </div>
       </div>
     </div>
@@ -35,111 +37,127 @@
 <div class="row"></div>
 <h2> Question 1</h2>
 <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
-<select>
-    <option value="volvo">1: Strongly Disagree</option>
-    <option value="saab">2: Disagree</option>
-    <option value="mercedes">3: Neutral</option>
-    <option value="audi">4: Agree</option>
-    <option value="audi">5: Strongly Agree</option>
+<select id="q1">
+    <option value="1">1: Strongly Disagree</option>
+    <option value="2">2: Disagree</option>
+    <option value="3">3: Neutral</option>
+    <option value="4">4: Agree</option>
+    <option value="5">5: Strongly Agree</option>
   </select>
   <br>
   <h2> Question 2</h2>
   <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q2">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 3</h2>
   <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q3">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 4</h2>
   <h3>You rarely do something just out of sheer curiosity.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q4">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 5</h2>
   <h3>People can rarely upset you.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q5">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 6</h2>
   <h3>It is often difficult for you to relate to other people’s feelings.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q6">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 7</h2>
   <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q7">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 8</h2>
   <h3>You rarely get carried away by fantasies and ideas.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q8">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 9</h2>
   <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q9">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
     <h2> Question 10</h2>
   <h3>You feel more energetic after spending time with a group of people.</h3>
-  <select>
-      <option value="volvo">1: Strongly Disagree</option>
-      <option value="saab">2: Disagree</option>
-      <option value="mercedes">3: Neutral</option>
-      <option value="audi">4: Agree</option>
-      <option value="audi">5: Strongly Agree</option>
+  <select id="q10">
+      <option value="1">1: Strongly Disagree</option>
+      <option value="2">2: Disagree</option>
+      <option value="3">3: Neutral</option>
+      <option value="4">4: Agree</option>
+      <option value="5">5: Strongly Agree</option>
     </select>
     <br>
-    <button type="button" class="Submit btn btn-primary"><i class="fas fa-user-check"></i> Submit</button>
+    <button type="button" class="Submit btn btn-primary" id="submit"><i class="fas fa-user-check"></i> Submit</button>
 </div>
 <footer>
     <p>
       <a href="/api/friends">API Friends List</a> | <a href="https://github.com/KristenDLR/FriendFinder">GitHub Repo</a>
     </p>
     </footer>
+
+<script type="text/javascript">
+$("#submit").on("click", function(){
+  console.log("Hello!!!");
+  var userData = {
+    name: $("#name").val(),
+    photo: $("#photo").val(),
+    score: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
+  };
+
+  $.post("/api/friends", userData, function(data){
+    console.log("Data: "+ JSON.stringify(data));
+    alert("Name: "+data.name);
+  })
+});
+</script>
 
 </body>
 </html>

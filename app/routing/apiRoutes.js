@@ -16,12 +16,13 @@ app.post("/api/friends", function(req, res){
 
   //User input
  var incomingSurv = req.body;
- var surveyResponse = incomingSurv.scores;
+ var surveyResponse = incomingSurv.score;
 
   //best matches
- var matches = "";
+ var matches = 0;
  //minimum difference the user and friend found have in common
- var minDifference = 30;
+ var minDifference = 0;
+ var scoresArr = [];
 
  // surveyResponse[i] = parseInt(surveyResponse[i]);
 
@@ -34,21 +35,19 @@ app.post("/api/friends", function(req, res){
     console.log(diff);
   }
 
-  //the difference is the lowest found, friend match occurres
-  if(diff < minDifference){
-    minDifference = diff;
-    matches = friends[i];
-    console.log(matches);
-  }
-
+  scoresArr.push(diff);
+ }
+//[12,45,9]
+ for(var i=0; i<scoresArr.length;i++){
+   if(scoresArr[i]<=scoresArr[matches]){
+      matches = i;
+   }
  }
 
- friends.push(incomingSurv);
- res.json({status: matches});
+var bestFriend = friends[matches];
+res.json(bestFriend);
 
-
-
-
+friends.push(incomingSurv);
 
 });
 };
