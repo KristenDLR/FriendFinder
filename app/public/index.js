@@ -1,6 +1,5 @@
 // create on click for submit button that does ajax to the server
 $("#submit").on("click", function(){
-  console.log("Hello!!!");
   var userData = {
     name: $("#name").val(),
     photo: $("#photo").val(),
